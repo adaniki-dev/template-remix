@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarEvent } from '@/components/calendar/types/calendar';
+import { CalendarEvent } from '../../types/calendar';
 
 const recurrenceTypes = {
   daily: 'Diariamente',

@@ -1,7 +1,7 @@
 'use client';
 
-import { getHours } from '@/components/calendar/utils/dateHelpers';
 import React from 'react';
+import { getHours } from '../../utils/dateHelpers';
 
 export const TimeGrid = () => {
   const hours = getHours();

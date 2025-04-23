@@ -1,7 +1,5 @@
-'use client';
 
-import { useCalendar } from '@/components/calendar/calendarContext';
-import React from 'react';
+import { useCalendar } from '../../calendarContext';
 
 export const MonthView = ({ EventMenu, EventTooltip }: any) => {
   const { currentDate, events } = useCalendar();

@@ -1,4 +1,3 @@
-'use client';
 import {
   Dialog,
   DialogContent,
@@ -6,8 +5,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
+} from '../dialog';
+import { Button } from '../button';
 import { useAlertDialog } from '.';
 
 export default function AlertModal({ children }: any) {

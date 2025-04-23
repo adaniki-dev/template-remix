@@ -1,5 +1,4 @@
-'use client';
-import { CalendarEvent, CalendarView } from '@/components/calendar/types/calendar';
+import { CalendarEvent, CalendarView } from './types/calendar';
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 interface DateRange {

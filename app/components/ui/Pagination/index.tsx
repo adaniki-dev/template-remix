@@ -1,7 +1,7 @@
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import ButtonPaginate from './ButtonPaginate';
 import IconButtonPaginate from './IconPaginate';
-import usePaginate from '@/hooks/usePaginate';
+import usePaginate from '@/hooks/use-paginate';
 
 interface PaginationProps {
   currentPage: number;

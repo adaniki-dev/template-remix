@@ -1,7 +1,7 @@
-import { useCalendar } from '@/components/calendar/calendarContext';
-import { CalendarHeader } from '@/components/calendar/calendarHeader';
-import { RecurringEventsBanner } from '@/components/calendar/common/RecurringEventBanner';
-import { DayView, MonthView, WeekView } from '@/components/calendar/views';
+import { useCalendar } from './calendarContext';
+import { CalendarHeader } from './calendarHeader';
+import { RecurringEventsBanner } from './common/RecurringEventBanner';
+import { DayView, MonthView, WeekView } from './views';
 
 export const Calendar = ({ EventMenu, EventTooltip }: any) => {
   const { view, events } = useCalendar();

@@ -1,7 +1,7 @@
 import React from 'react';
-import { useCalendar } from '@/components/calendar/calendarContext';
-import { getHours } from '@/components/calendar/utils/dateHelpers';
-import { calculateOverlappingEvents } from '@/components/calendar/utils/layoutEvents';
+import { getHours } from '../../utils/dateHelpers';
+import { calculateOverlappingEvents } from '../../utils/layoutEvents';
+import { useCalendar } from '../../calendarContext';
 
 interface DayViewProps {
   EventMenu?: React.ComponentType<any>;

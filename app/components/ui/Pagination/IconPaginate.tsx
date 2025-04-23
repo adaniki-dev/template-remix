@@ -1,5 +1,5 @@
-'use client';
-import { useRouter } from 'next/navigation';
+import { useNavigate } from "@remix-run/react";
+import React from "react";
 
 interface IconButtonPaginateProps {
   currentPage: number;
@@ -22,10 +22,10 @@ export default function IconButtonPaginate({
   typePageChange = 'route',
   action,
 }: IconButtonPaginateProps) {
-  const router = useRouter();
+  const navigate = useNavigate();
   function handlePageChange(page: number) {
     const newURLWithParams = new URLSearchParams(window.location.search);
-    router.push(
+    navigate(
       `${onPageChange.route}/${page}/${onPageChange.flattenParams}?${newURLWithParams.toString()}`,
     );
   }
@@ -33,7 +33,7 @@ export default function IconButtonPaginate({
   function handlePageChangeViaParams(page: number) {
     const searchParams = new URLSearchParams(window.location.search);
     searchParams.set('page', page.toString());
-    router.push(`${onPageChange.route}?${searchParams.toString()}`);
+    navigate(`${onPageChange.route}?${searchParams.toString()}`);
   }
 
   function handlePageChangeViaState(page: number) {

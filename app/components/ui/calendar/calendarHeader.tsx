@@ -1,8 +1,6 @@
-'use client';
-
-import { useCalendar } from '@/components/calendar/calendarContext';
-import { ViewSelector } from '@/components/calendar/common/ViewSelector';
-import { Button } from '@/components/ui/button';
+import { useCalendar } from './calendarContext';
+import { ViewSelector } from './common/ViewSelector';
+import { Button } from '../button';
 
 export const CalendarHeader = () => {
   const { view, setView, currentDate, setCurrentDate } = useCalendar();

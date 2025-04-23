@@ -1,6 +1,7 @@
 'use client';
 
-import { CalendarView } from '@/components/calendar/types/calendar';
+import { CalendarView } from "../../types/calendar";
+
 
 interface ViewSelectorProps {
   view: CalendarView;

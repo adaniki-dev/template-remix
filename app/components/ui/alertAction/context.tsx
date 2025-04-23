@@ -1,7 +1,6 @@
-'use client';
-
 import { createContext, useState } from 'react';
 import AlertModal from './modalAlert';
+import ClientOnly from './ClientOnly';
 
 type AlertContextType = {
   modal: any;
@@ -88,7 +87,9 @@ export function AlertContextProvider({ children }: alertContextProps) {
       }}
     >
       {children}
-      <AlertModal />
+      <ClientOnly>
+        <AlertModal />
+      </ClientOnly>
     </AlertContext.Provider>
   );
 }

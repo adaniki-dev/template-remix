@@ -1,4 +1,4 @@
-import { CalendarEvent } from '@/components/calendar/types/calendar';
+import { CalendarEvent } from "../types/calendar";
 
 interface LayoutEvent extends CalendarEvent {
   width?: string;

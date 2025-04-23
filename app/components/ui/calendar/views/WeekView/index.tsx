@@ -1,8 +1,9 @@
 import React from 'react';
-import { useCalendar } from '@/components/calendar/calendarContext';
-import { getWeekDays, getHours } from '@/components/calendar/utils/dateHelpers';
-import { calculateOverlappingEvents } from '@/components/calendar/utils/layoutEvents';
-import { CalendarEvent } from '@/components/calendar/types/calendar';
+
+import { useCalendar } from '../../calendarContext';
+import { CalendarEvent } from '../../types/calendar';
+import { getHours, getWeekDays } from '../../utils/dateHelpers';
+import { calculateOverlappingEvents } from '../../utils/layoutEvents';
 
 const calculateEventStyles = (event: CalendarEvent & { width?: string; left?: string }) => {
   const duration = (event.end.getTime() - event.start.getTime()) / (1000 * 60);
