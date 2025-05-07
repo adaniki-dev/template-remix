@@ -232,7 +232,7 @@ export const FormProvider: React.FC<FormProviderProps> = ({
       } else {
         const formData = new FormData(e.currentTarget);
         const formElement = e.currentTarget as HTMLFormElement;
-        const action = formElement.action || "/?index";
+        const action = formElement.action || "";
 
         const url = new URL(action);
         const actionPath = url.pathname + url.search;

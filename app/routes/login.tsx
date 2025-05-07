@@ -1,7 +1,7 @@
 import LoginPage from "@/entity/auth/view/login";
 import { authenticator } from "@/services/auth.server";
 import { sessionStorage } from "@/services/session.server";
-import { ActionFunctionArgs, json, redirect } from "@remix-run/node";
+import { ActionFunctionArgs, redirect } from "@remix-run/node";
 export default function Login() {
     return (
         <LoginPage />
@@ -11,7 +11,6 @@ export default function Login() {
 export async function action({ request }: ActionFunctionArgs) {
     try {
         // Authenticate the user
-
         const user = await authenticator.authenticate("credentials", request);
 
         // Get the session and set the user
@@ -25,7 +24,14 @@ export async function action({ request }: ActionFunctionArgs) {
             },
         });
     } catch (error) {
-        // Return error message for display
-        return json({ error: error instanceof Error ? error.message : "Unknown error occurred" }, { status: 400 });
+        return new Response(
+            JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error occurred" }),
+            {
+                status: 400,
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }
+        );
     }
 }

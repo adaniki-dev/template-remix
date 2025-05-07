@@ -14,7 +14,6 @@ const SignupSchema = z.object({
 
 export default function LoginForm() {
     const { validate } = useZodValidation(SignupSchema);
-    const location = useLocation();
 
     return (
         <CardContent>
