@@ -1,4 +1,3 @@
-"use client";
 export const addSearchParamsInUrl = (key: string, value?: string) => {
   if (!value) {
     throw new Error("Value is required");

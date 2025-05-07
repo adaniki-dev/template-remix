@@ -231,9 +231,14 @@ export const FormProvider: React.FC<FormProviderProps> = ({
         onSubmit(values);
       } else {
         const formData = new FormData(e.currentTarget);
+        const formElement = e.currentTarget as HTMLFormElement;
+        const action = formElement.action || "/?index";
+
+        const url = new URL(action);
+        const actionPath = url.pathname + url.search;
         submit(formData, {
           method: "post",
-          action: (e.currentTarget as HTMLFormElement).action,
+          action: actionPath,
         });
       }
     },
